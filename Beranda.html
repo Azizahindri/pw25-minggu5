@@ -80,6 +80,7 @@
                             Genre
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#" onclick="clearFilter()"> All </a></li>
                             <li><a class="dropdown-item" href="#" onclick="filterGenre('fiksi')">Fiksi</a></li>
                             <li><a class="dropdown-item" href="#" onclick="filterGenre('non-fiksi')">Non-Fiksi</a></li>
                             <li><a class="dropdown-item" href="#" onclick="filterGenre('romansa')">Romansa</a></li>
@@ -290,6 +291,12 @@
                     }
                 });
             }
+            function clearFilter() {
+            var bookItems = document.querySelectorAll('.book-item');
+            bookItems.forEach(function(book) {
+                book.style.display = 'block';  // Show all books
+            });
+        }
 
     </script>
 
